@@ -4,7 +4,7 @@ This shows a minimal example of how to reproduce the issue with `postTasksExecut
 
 ## Error
 
-When running DTE with `postTasksExecution` configured, the following task fails:
+When running DTE with `postTasksExecution` configured, the hook will fail to execute with the following printed:
 
 ```
  NX   Error completing post run task hook
@@ -50,4 +50,11 @@ import type { PostTasksExecution } from '@nx/devkit';
 export const postTasksExecution: PostTasksExecution = async (_options, context) => {
   console.log(context.taskResults);
 };
+```
+
+CI:
+
+```yml
+- name: Foo
+  run: npx nx affected -t foo --configuration=ci
 ```
