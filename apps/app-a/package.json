@@ -22,27 +22,11 @@
     "targets": {
       "sub-1": {
         "cache": true,
-        "command": "sleep 20 && echo app-a sub-1"
+        "command": "sleep 10 && echo app-a sub-1 && exit 1"
       },
       "sub-2": {
         "cache": true,
-        "command": "sleep 30 && echo app-a sub-2"
-      },
-      "sub-3": {
-        "cache": true,
-        "command": "sleep 30 && echo app-a sub-3"
-      },
-      "sub-4": {
-        "cache": true,
-        "command": "sleep 30 && echo app-a sub-4"
-      },
-      "sub-5": {
-        "cache": true,
-        "command": "sleep 30 && echo app-a sub-5"
-      },
-      "sub-6": {
-        "cache": true,
-        "command": "sleep 30 && echo app-a sub-6"
+        "command": "sleep 10 && echo app-a sub-2"
       },
       "foo": {
         "executor": "nx:noop",
