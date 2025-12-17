@@ -60,8 +60,11 @@ jobs:
       - name: Check the formatting
         run: npx nx-cloud record -- nx format:check
 
-      - name: Foo
+      - name: Foo (DTE)
         run: npx nx affected -t foo --configuration=ci
+
+      - name: Foo (--no-dte)
+        run: npx nx affected -t foo --configuration=ci --no-dte --skip-nc-cache
 
   agents:
     name: Agent ${{ matrix.agent }}
