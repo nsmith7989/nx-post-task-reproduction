@@ -1,0 +1,57 @@
+{
+  "name": "app-b",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "sideEffects": false,
+  "dependencies": {
+    "@react-router/node": "^7.2.0",
+    "@react-router/serve": "^7.2.0",
+    "isbot": "^4.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.2.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.2.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "nx": {
+    "targets": {
+      "sub-1": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-1"
+      },
+      "sub-2": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-2"
+      },
+      "sub-3": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-3"
+      },
+      "sub-4": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-4"
+      },
+      "sub-5": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-5"
+      },
+      "sub-6": {
+        "cache": true,
+        "command": "sleep 30 && echo app-a sub-6"
+      },
+      "foo": {
+        "executor": "nx:noop",
+        "cache": true,
+        "parallelism": false,
+        "dependsOn": [
+          "sub-*"
+        ]
+      }
+    }
+  }
+}
