@@ -65,7 +65,7 @@ jobs:
 
       - name: Foo (--no-dte)
         if: always()
-        run: npx nx affected -t foo --configuration=ci --no-dte --skip-nc-cache
+        run: npx nx affected -t foo --configuration=ci --no-dte --skip-no-cache
 
   agents:
     name: Agent ${{ matrix.agent }}
