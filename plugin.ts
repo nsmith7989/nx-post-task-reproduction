@@ -9,8 +9,9 @@ export const postTasksExecution: PostTasksExecution = async (
     console.log({
       project,
       status: result.status,
-      startTime: result.task.startTime,
-      endTime: result.task.endTime,
+      terminalOutput: result.terminalOutput,
+      startTime: result.startTime,
+      endTime: result.endTime,
     });
   }
 };
