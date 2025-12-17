@@ -22,7 +22,7 @@
     "targets": {
       "sub-1": {
         "cache": true,
-        "command": "sleep 30 && echo app-a sub-1"
+        "command": "sleep 30 && echo app-a sub-1 && exit 1"
       },
       "sub-2": {
         "cache": true,
