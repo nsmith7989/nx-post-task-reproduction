@@ -1,5 +1,5 @@
 {
-  "name": "@post-task-reprouction/app-a",
+  "name": "app-a",
   "private": true,
   "type": "module",
   "scripts": {},
@@ -17,5 +17,22 @@
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0"
+  },
+  "nx": {
+    "targets": {
+      "sub-a": {
+        "cache": true,
+        "command": "echo app-a sub-a"
+      },
+      "sub-b": {
+        "cache": true,
+        "command": "echo app-a sub-b"
+      },
+      "foo": {
+        "executor": "nx:noop",
+        "cache": true,
+        "dependsOn": ["sub-*"]
+      }
+    }
   }
 }
