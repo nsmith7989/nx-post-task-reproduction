@@ -60,7 +60,7 @@ jobs:
       - name: Check the formatting
         run: npx nx-cloud record -- nx format:check
 
-      - name: Lint, test, build, and run e2e
+      - name: Foo
         run: npx nx affected -t foo --configuration=ci
 
   agents:

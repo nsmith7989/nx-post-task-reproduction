@@ -22,16 +22,18 @@
     "targets": {
       "sub-a": {
         "cache": true,
-        "command": "echo app-a sub-a"
+        "command": "sleep 20 && echo app-a sub-a"
       },
       "sub-b": {
         "cache": true,
-        "command": "echo app-a sub-b"
+        "command": "sleep 30 && echo app-a sub-b"
       },
       "foo": {
         "executor": "nx:noop",
         "cache": true,
-        "dependsOn": ["sub-*"]
+        "dependsOn": [
+          "sub-*"
+        ]
       }
     }
   }

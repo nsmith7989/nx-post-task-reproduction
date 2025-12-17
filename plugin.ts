@@ -5,4 +5,12 @@ export const postTasksExecution: PostTasksExecution = async (
   context
 ) => {
   console.log(context.taskResults);
+  for (const [project, result] of Object.entries(context.taskResults)) {
+    console.log({
+      project,
+      status: result.status,
+      startTime: result.task.startTime,
+      endTime: result.task.endTime,
+    });
+  }
 };
